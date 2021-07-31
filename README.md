@@ -6,11 +6,14 @@ A Spotify playlist analyzer that I'm whipping up for fun, primarily using Spotip
 
 OK I HAVE MODERATE CONFIDENCE that if you run this script it will do something in the realm of your expectations.
 
-Won't go into many details, but this is a python script to take a look at some of the data that Spotify maintains on *most every song in their library*. It grabs analytical measurements such as the "enegry", "valence", or "speechiness" of a song. There's also other cool stuff to pull like duration, popularity, artist genres (they also have album genres as a separate field but it doen't look super populated), etc. This script pulls that data for every song on a playlist, makes it available to people, and does some ... "light analytics".
+Won't go into many details, but this is a python script to take a look at some of the data that Spotify maintains on *most every song in their library*. It grabs analytical measurements such as the "enegry", "valence", or "speechiness" of a song. There's also other cool stuff to pull like duration, popularity, artist genres (they also have album genres as a separate field but it doen't look super populated), etc. 
 
-I'm not a statistician yo - I just push buttons, and just barely do that. This is not a perfect project by far, but it will get the job done.
+Here's more info:
+https://developer.spotify.com/discover/
 
-I've also taken a shot at making this more available to people who have never used Python before, and might be using Windows. It's not *super informative* and may require some Googling. I actually haven't used Python on Windows in years, but I think the instructions below work.
+This script pulls that data for every song on a playlist, makes it available to people, and does some ... "light analytics". I'm not a statistician yo - I just push buttons.
+
+I've also taken a shot at making this more available to people less exepirence with Python, and might be using Windows. I actually haven't used Python on Windows in years, so it's not *super informative* and may require some Googling. But I hope the general idea is there. I'd really like to get more familiar with Django / Heroku / other web technologies and give this code a cool web UI. 
 
 ## Installation
 
