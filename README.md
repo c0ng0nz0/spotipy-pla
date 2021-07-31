@@ -77,7 +77,7 @@ The playlist ID is the portion after "playlist/" and before the URL parameters (
 Here is an example of it running:
 
 ```
-python test.py
+python whatever.py
 Enter playlist id: 2fgBaTw3YbvsVymdXHpf1M
 16
 Finished: 0
