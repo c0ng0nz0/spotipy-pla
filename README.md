@@ -1,17 +1,16 @@
 # spotipy-pla
 A Spotify playlist analyzer that I'm whipping up for fun, primarily using Spotipy.
 
-----
-Update
 
-OK I HAVE MODERATE CONFIDENCE THAT IF YOU RUN THIS SCRIPT IT WILL DO SOMETHING IN THE REALM OF YOUR EXPECTATIONS.
-----
+## Update
 
-Won't go into many details, but this is a python script to take a look at some of the data that Spotify maintains on *most every song in their library*. It grabs analytical measurements such as the "enegry", "valence", or "speechiness" of a song. There's also other cool stuff to pull like duration, popularity, artist genres (they also have album genres as a separate field but it doen't look super populated), etc. It currently pulls that data for every song on a playlist, makes the data available in a programatic format, and does some ... "light analytics".
+OK I HAVE MODERATE CONFIDENCE that if you run this script it will do something in the realm of your expectations.
 
-I'm not a statistician yo - I just push buttons.
+Won't go into many details, but this is a python script to take a look at some of the data that Spotify maintains on *most every song in their library*. It grabs analytical measurements such as the "enegry", "valence", or "speechiness" of a song. There's also other cool stuff to pull like duration, popularity, artist genres (they also have album genres as a separate field but it doen't look super populated), etc. This script pulls that data for every song on a playlist, makes it available to people, and does some ... "light analytics".
 
-I've also taken a stab at trying to be more informative on installation incase no one has ever used Python before, and might be using Windows. It's not *super informative* and may require some Googling. I actually haven't used Python on Windows in years and haven't kept up much.
+I'm not a statistician yo - I just push buttons, and just barely do that. This is not a perfect project by far, but it will get the job done.
+
+I've also taken a shot at making this more available to people who have never used Python before, and might be using Windows. It's not *super informative* and may require some Googling. I actually haven't used Python on Windows in years, but I think the instructions below work.
 
 ## Installation
 
@@ -26,7 +25,9 @@ pip install spotipy
 pip install openpyxl
 pip install maybe-there's-another-one.not-a-100%here
 ```
-If you understand Git ... you don't need my advice. If you'd rather not, just copy and paste "splaz.py" into "whatever.py", which is in a directory you can run the "python" command from. You can use NotePad if you want .... buuuuuut ...... if you ever do this with any frequency I'd recommend installing NotePad++.
+If you understand Git ... you don't need my advice.
+
+If you're like "I'd rather not", cheers. Copy and paste "splaz.py" into "whatever.py", which is in a directory you can run the "python" command from. You can use NotePad if you want .... buuuuuut ...... if you ever do this with any frequency I'd recommend installing NotePad++.
 
 In order to run this script, you'll need Spotify Developer API app credentials. Those aren't super hard to get, just log into 
 https://developer.spotify.com/dashboard/ and create a new app. What I've decided to to is create a single app for all my Spotipy developement. You'll 
@@ -61,7 +62,6 @@ source ve/bin/activate
 ```
 ### If you did not, and are probably using Windows
 Ok - you've got two options here. You can either place the credentials you have into variables in the script and change it use that inforamtion. And despite what everyone in the security community might say (that it's a bad practice - which it is), the chances of it becoming an issue are slim at best. The .. "adjective" way to do it would be to set those values as environment variables. And creating windows environment variables called SPOTIPY_CLIENT_ID and SPOTIPY_CLIENT_SECRET isn't super hard.
-
 
 
 ## Running
