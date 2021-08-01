@@ -13,33 +13,32 @@ https://developer.spotify.com/discover/
 
 This script pulls that data for every song on a playlist, makes it available to people, and does some ... "light analytics". I'm not a statistician yo - I just push buttons.
 
-I've also taken a shot at making this more available to people less exepirence with Python, and might be using Windows. I actually haven't used Python on Windows in years, so it's not *super informative* and may require some Googling. But I hope the general idea is there. I'd really like to get more familiar with Django / Heroku / other web technologies and give this code a cool web UI. 
-
 ## Installation
 
-You'll need to have python3 installed, and run it from an environment that has the "spotipy" and "openpyxl" packages. I like creating virtual environments for this sort of thing. It let's me keep my Python environments a little cleaner - but is totally optional.
+If you know the word Python is more than just a type of boop noodle, but haven't actually "used" the Python programming langauge to do stuff, here's a short crash course.
 
-``` 
-# From a bash shell: You may need to grab python3 yourself somehow
-# For Windows: Install from the website, and ... just skip the first two commands, it'll be fine
-python3 -m venv ve
-source ve/bin/activate
+https://c0ng0nz0.github.io/2021/07/30/Installing-Python.html
+
+You'll need to have python3 installed, and run it from an environment that has the "spotipy" and "openpyxl" packages. 
+
+```
 pip install spotipy
 pip install openpyxl
-pip install maybe-there's-another-one.not-a-100%here
 ```
-If you understand Git ... you don't need my advice.
 
-If you're like "I'd rather not", cheers. Copy and paste "splaz.py" into "whatever.py", which is in a directory you can run the "python" command from. You can use NotePad if you want .... buuuuuut ...... if you ever do this with any frequency I'd recommend installing NotePad++.
+Use a virtual environment or don't, I'm not your mother.
+
+## Authentication
 
 In order to run this script, you'll need Spotify Developer API app credentials. Those aren't super hard to get, just log into 
 https://developer.spotify.com/dashboard/ and create a new app. What I've decided to to is create a single app for all my Spotipy developement. You'll 
 need a client ID and client secret. They are each 32 hex character strings.
 
-Now, I've decided to not hardcode those into my scripts because I'm pretty sure that's 30 lashes. What I think is a cool idea is the store them as environment variables. 
+The script will prompt you for that information if you don't want to mess with environment variables. 
 
-### If you created a virtual environment using the above commands...
-You can actually go the the bottom of the `ve/bin/activate` file and add whatever commands to create those environment variables. I use a Mac, so that means using `export`.
+But if you do, and have a virutal environment set up ....
+
+You can actually go the the bottom of the `bin/activate` file and add whatever commands to create those environment variables. Here's an example I use on my Mac.
 
 ```
 vim ve/bin/active
@@ -58,14 +57,6 @@ export SPOTIPY_CLIENT_ID
 SPOTIPY_CLIENT_SECRET='1234567890abcdef1234567890abcdef' # Example data used, put replace it with your own client secret
 export SPOTIPY_CLIENT_SECRET
 ```
-Once those are in place, you can leave (if needed) and re-enter your virtual envrionment, and everything is good to go.
-```
-deactivate
-source ve/bin/activate
-```
-### If you did not, and are probably using Windows
-Ok - you've got two options here. You can either place the credentials you have into variables in the script and change it use that inforamtion. And despite what everyone in the security community might say (that it's a bad practice - which it is), the chances of it becoming an issue are slim at best. The .. "adjective" way to do it would be to set those values as environment variables. And creating windows environment variables called SPOTIPY_CLIENT_ID and SPOTIPY_CLIENT_SECRET isn't super hard.
-
 
 ## Running
 
@@ -116,8 +107,4 @@ python splaz.py json
 python splaz.py excel
 python splaz.py all
 ```
-
-
-
-
 
