@@ -31,12 +31,12 @@ Use a virtual environment or don't, I'm not your mother.
 ## Authentication
 
 In order to run this script, you'll need Spotify Developer API app credentials. Those aren't super hard to get, just log into 
-https://developer.spotify.com/dashboard/ and create a new app. What I've decided to to is create a single app for all my Spotipy developement. You'll 
+https://developer.spotify.com/dashboard/ and create a new app. What I've decided to do is create a single app for all my Spotipy developement. You'll 
 need a client ID and client secret. They are each 32 hex character strings.
 
 The script will prompt you for that information if you don't want to mess with environment variables. 
 
-But if you do, and have a virutal environment set up ....
+But if you do, and have a virtual environment set up ....
 
 You can actually go the the bottom of the `bin/activate` file and add whatever commands to create those environment variables. Here's an example I use on my Mac.
 
@@ -72,6 +72,7 @@ Here is an example of it running:
 
 ```
 python whatever.py
+# You may also get prompted for the Spotify API credentials here
 Enter playlist id: 2fgBaTw3YbvsVymdXHpf1M
 16
 Finished: 0
@@ -108,3 +109,7 @@ python splaz.py excel
 python splaz.py all
 ```
 
+The Excel document has a few tables and charts taht might or might not be useful, and all the data in another sheet.
+
+![table](https://user-images.githubusercontent.com/3879630/127781323-ee110f46-09fd-449b-b32f-fbc2f9d8bb6b.png)
+![chart](https://user-images.githubusercontent.com/3879630/127781324-a1bf8519-9353-4f92-afe2-dccc8935b86a.png)
