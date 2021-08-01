@@ -1,5 +1,5 @@
 # spotipy-pla
-A Spotify playlist analyzer that I'm whipping up for fun, primarily using Spotipy.
+A Spotify playlist analyzer that I'm whipping up for fun and non-profit, primarily using Spotipy.
 
 
 ## Update
