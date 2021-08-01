@@ -1,12 +1,10 @@
 import json
 import time
 import sys
+import os
 from collections import defaultdict
 from collections import OrderedDict
-
-import json
 import statistics
-from collections import defaultdict
 
 from openpyxl import Workbook
 from openpyxl.chart import (
@@ -19,9 +17,12 @@ from openpyxl.formatting.rule import ColorScaleRule
 
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+
+if ("SPOTIPY_CLIENT_ID" not in os.environ.keys()) or ("SPOTIPY_CLIENT_SECRET" not in os.environ.keys()):
+	os.environ["SPOTIPY_CLIENT_ID"] = input("Spotify Client ID: ")
+	os.environ["SPOTIPY_CLIENT_SECRET"] = input("Spotify Client Secret: ")
+
 spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
-
-
 
 
 # Method definitions
